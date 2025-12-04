@@ -10,6 +10,7 @@ public class PopUpManager : MonoBehaviour
     public Transform player;
     public string objectName;
 
+
     void Update()
     {
         popUp.transform.LookAt(player);
