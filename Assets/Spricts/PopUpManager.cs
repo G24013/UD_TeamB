@@ -7,30 +7,36 @@ using UnityEngine;
 public class PopUpManager : MonoBehaviour
 {
     public GameObject popUp, range;
-    public Transform player;
+    public Transform player,popUpt;
     public string objectName;
-
 
     void Update()
     {
-        popUp.transform.LookAt(player);
+        //popUp.transform.LookAt(player);
+        //Debug.Log(gameObject.name);
     }
-    
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag(objectName))
-        {
-            Debug.Log("‚Ó‚ê");
-            popUp.SetActive(true);
-        }
+        //if (other.CompareTag(objectName))
+        //{
+        //    Debug.Log("‚Ó‚ê");
+        //    popUp.SetActive(true);
+        //}
+
+        Debug.Log("‚Ó‚ê");
+        popUp.SetActive(true);
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag(objectName))
-        {
-            Debug.Log("‚Í‚È‚ê");
-            popUp.SetActive(false);
-        }
-    } 
+        //if (other.CompareTag(objectName))
+        //{
+        //    Debug.Log("‚Í‚È‚ê");
+        //    popUp.SetActive(false);
+        //}
+
+        Debug.Log("‚Í‚È‚ê");
+        popUp.SetActive(false);
+    }
 }

@@ -281,29 +281,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3893294197879345259, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
   m_PrefabInstance: {fileID: 1031191110}
   m_PrefabAsset: {fileID: 0}
---- !u!136 &169615846
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 63527129}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.16372481
-  m_Height: 0.75
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.37, z: 0}
 --- !u!114 &169615847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,7 +288,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 63527129}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 20ad21112c8c50747aced315cd22516a, type: 3}
   m_Name: 
@@ -319,6 +296,7 @@ MonoBehaviour:
   popUp: {fileID: 1342199665}
   range: {fileID: 1007856697}
   player: {fileID: 169615838}
+  popUpt: {fileID: 1342199666}
   objectName: VoiceGuide
 --- !u!54 &169615848
 Rigidbody:
@@ -1560,6 +1538,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scaniverse_2025_10_30_152746
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a28478629619e36439d02d804abf7b6d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -1772,7 +1754,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.383, y: 0.54, z: 0.129}
-  m_LocalScale: {x: 5, y: 0.1, z: 5}
+  m_LocalScale: {x: 10, y: 0.1, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1848848179}
@@ -2130,6 +2112,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5930158855145388821, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6982812146204527121, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       propertyPath: m_Avatar
       value: 
@@ -2151,9 +2137,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4416926081852918481, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       insertIndex: 2
       addedObject: {fileID: 169615847}
-    - targetCorrespondingSourceObject: {fileID: 4416926081852918481, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 169615846}
     - targetCorrespondingSourceObject: {fileID: 4416926081852918481, guid: 64dce48905ffd9b4293e595fa6941544, type: 3}
       insertIndex: -1
       addedObject: {fileID: 169615848}
@@ -2679,6 +2662,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Scaniverse_2025_10_30_152229
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a5644b278294b87459977d7814ae6b90, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -2700,11 +2687,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1342199666}
   - component: {fileID: 1342199667}
-  - component: {fileID: 1342199669}
   - component: {fileID: 1342199668}
+  - component: {fileID: 1342199669}
   m_Layer: 0
   m_Name: none
-  m_TagString: Untagged
+  m_TagString: VoiceGude
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2786,11 +2773,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1342199665}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5feb2e881e2844f41961672475ad235c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 848504676}
+  popUp: {fileID: 1342199665}
+  range: {fileID: 1007856697}
+  objectName: VoiceGuide
 --- !u!114 &1342199669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2806,6 +2797,7 @@ MonoBehaviour:
   popUp: {fileID: 1342199665}
   range: {fileID: 1007856697}
   player: {fileID: 169615838}
+  popUpt: {fileID: 0}
   objectName: 
 --- !u!1 &1399581387
 GameObject:
@@ -3522,6 +3514,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5feb2e881e2844f41961672475ad235c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  popUp: {fileID: 0}
+  range: {fileID: 0}
+  objectName: 
 --- !u!114 &1640401118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3537,6 +3533,7 @@ MonoBehaviour:
   popUp: {fileID: 1640401115}
   range: {fileID: 1537385438}
   player: {fileID: 169615838}
+  popUpt: {fileID: 0}
   objectName: 
 --- !u!212 &1640401119
 SpriteRenderer:
@@ -3676,9 +3673,13 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7853235576087578576, guid: e09deef561b3222428d8c35298c636ca, type: 3}
+      propertyPath: m_TagString
+      value: VoiceGude
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e09deef561b3222428d8c35298c636ca, type: 3}
       propertyPath: m_Name
-      value: VoiceGuide01_reduced
+      value: VoiceGuide
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e09deef561b3222428d8c35298c636ca, type: 3}
       propertyPath: m_TagString
@@ -3741,6 +3742,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5feb2e881e2844f41961672475ad235c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  popUp: {fileID: 0}
+  range: {fileID: 0}
+  objectName: 
 --- !u!114 &1694474484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3756,6 +3761,7 @@ MonoBehaviour:
   popUp: {fileID: 1694474481}
   range: {fileID: 948980180}
   player: {fileID: 169615838}
+  popUpt: {fileID: 0}
   objectName: 
 --- !u!212 &1694474485
 SpriteRenderer:
@@ -3849,6 +3855,7 @@ MonoBehaviour:
   popUp: {fileID: 0}
   range: {fileID: 0}
   player: {fileID: 0}
+  popUpt: {fileID: 0}
   objectName: 
 --- !u!4 &1777591153
 Transform:
