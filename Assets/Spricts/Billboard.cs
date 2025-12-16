@@ -30,6 +30,7 @@ public class Billboard : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("êeÇ¢Ç»Ç¢ÇÊ(ì∆)");
         /*
         if (range.transform.parent == null)
         {
