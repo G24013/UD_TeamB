@@ -3,9 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class titlebutton : MonoBehaviour
 {
-    public void ChangeScene(string Title)
+    public void ChangeScene()
     {
-        SceneManager.LoadScene(Title);
+        SceneManager.LoadScene("Title");
     }
 }
 
