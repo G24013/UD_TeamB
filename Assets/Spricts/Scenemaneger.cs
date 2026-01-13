@@ -3,6 +3,10 @@ using UnityEngine.SceneManagement;
 
 public class Scenemaneger : MonoBehaviour
 {
+    public void TitleScene()
+    {
+        SceneManager.LoadScene("Title");
+    }
     public void GameScene()
     {
         SceneManager.LoadScene("GameMain");
