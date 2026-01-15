@@ -1,6 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Xml.Linq;
+//using System.Collections;
+//using System.Collections.Generic;
+//using System.Xml.Linq;
 using UnityEngine;
 
 public class Billboard : MonoBehaviour
@@ -15,7 +15,9 @@ public class Billboard : MonoBehaviour
         camPos.y = transform.position.y;
         transform.LookAt(camPos);
         transform.Rotate(0, 180, 0);
-        /*
+        Debug.Log(gameObject.name+"iueiueiueiueiueiue");
+
+        
         if (range.transform.parent == null)
         {
             Debug.Log("親いないよ(独)");
@@ -25,22 +27,22 @@ public class Billboard : MonoBehaviour
             string namae = range.transform.parent.name;
             Debug.Log("ああああ" + namae + "おおおおお");
         }
-        */
+        
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("親いないよ(独)");
+        //Debug.Log("親いないよ(独)");
         /*
         if (range.transform.parent == null)
         {
-            Debug.Log("親いないよ(独)");
+            UnityEngine.Debug.Log("親いないよ(独)");
         }
         else
         {
             string namae = range.transform.parent.name;
             //Debug.Log("ああああ" + namae + "おおおおお");
-            Debug.Log("ああああおおおおお");
+            UnityEngine.Debug.Log("ああああおおおおお");
 
             if (namae == objectName)
             {
@@ -49,6 +51,9 @@ public class Billboard : MonoBehaviour
             }
         }
         */
+        popUp.SetActive(true);
+        Debug.Log("ふれ");
+        
     }
 
     private void OnTriggerExit(Collider other)
