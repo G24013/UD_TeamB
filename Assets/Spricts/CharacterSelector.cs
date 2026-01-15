@@ -11,11 +11,11 @@ public class CharacterSelector : MonoBehaviour
 
     void Start()
     {
-        // 1人目（0番）を強制的に選択した状態にする
-        // characterModels が空（Size 0）でないかだけ確認
         if (characterModels != null && characterModels.Length > 0)
         {
-            OnPlayerClick(0);
+            // PlayerDataに保存されている「今のゲーム中の選択」を呼び出す
+            // まだ一度も選んでいなければ、PlayerDataの初期値である「0」が使われます
+            OnPlayerClick(PlayerData.selectedCharacterIndex);
         }
     }
 
@@ -40,12 +40,11 @@ public class CharacterSelector : MonoBehaviour
             // 世界の座標(position)ではなく、UIの座標(anchoredPosition)を直接合わせる
             selectionFrame.anchoredPosition = buttonPositions[index].anchoredPosition;
 
-            // 念のため、枠が最前面に来るように設定（他のボタンに隠れないように）
-            selectionFrame.SetAsLastSibling();
+            // 枠を一番奥（背景側）に移動させる命令
+            selectionFrame.SetAsFirstSibling();
         }
 
         // 保存
         PlayerData.selectedCharacterIndex = index;
-        PlayerPrefs.SetInt("SavedCharacter", index);
     }
 }
