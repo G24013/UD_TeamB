@@ -12,8 +12,8 @@ public class PopUpManager : MonoBehaviour
 
     void Update()
     {
-        //popUp.transform.LookAt(player);
-        //Debug.Log(gameObject.name);
+        popUp.transform.LookAt(player);
+        Debug.Log(gameObject.name+"_old");
     }
 
     private void OnTriggerEnter(Collider other)
@@ -24,8 +24,8 @@ public class PopUpManager : MonoBehaviour
         //    popUp.SetActive(true);
         //}
 
-        Debug.Log("‚Ó‚ê");
-        popUp.SetActive(true);
+        //Debug.Log("‚Ó‚ê");
+        //popUp.SetActive(true);
     }
 
     private void OnTriggerExit(Collider other)
@@ -36,7 +36,7 @@ public class PopUpManager : MonoBehaviour
         //    popUp.SetActive(false);
         //}
 
-        Debug.Log("‚Í‚È‚ê");
-        popUp.SetActive(false);
+        //Debug.Log("‚Í‚È‚ê");
+        //popUp.SetActive(false);
     }
 }
